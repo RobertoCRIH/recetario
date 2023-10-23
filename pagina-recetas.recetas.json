@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "65343002db85f578db90b2af"
+  },
+  "nombre": "Pay De Manzana",
+  "autor": "Roberto Centeno",
+  "tiempo": 30,
+  "ingredientes": [
+    "Una cucharada de azucar",
+    "Tres Manzanas",
+    "Harina"
+  ],
+  "pasos": [
+    "Pela las manzanas",
+    "Echale azúcar a las manzanas",
+    "Metelas al horno"
+  ],
+  "likes": 12
+}]
