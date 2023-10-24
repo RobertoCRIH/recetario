@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import LoginAndSignup from './routes/loginSignup';
 import AuthDetails from './components/auth/authDetails';
+import Recipe from './routes/recipe';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/home',
     element: <AuthDetails/>
+  },
+  {
+    path: '/recipe',
+    element: <Recipe/>
   }
 ])
 

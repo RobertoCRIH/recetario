@@ -1,0 +1,11 @@
+.cardSectionWrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.cardSection{
+    display: flex;
+    gap: 15px;
+    padding: 15px auto;
+    flex-wrap: wrap;
+}
