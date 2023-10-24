@@ -1,13 +1,9 @@
-import SignIn from './components/auth/signIn';
-import SignUp from './components/auth/signUp';
-import AuthDetails from './components/auth/authDetails';
+import LoginAndSignup from "./routes/loginSignup";
 
 function App() {
   return (
     <div>
-      <SignIn/>
-      <SignUp/>
-      <AuthDetails/>
+      <LoginAndSignup/>
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import {auth} from '../../firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
-const SignUp = ()=>{
+const SignIn = ()=>{
 
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
@@ -11,11 +12,15 @@ const SignUp = ()=>{
         e.preventDefault();
         signInWithEmailAndPassword(auth,email,password)
         .then((userCredential)=>{
-            console.log(userCredential)
+            console.log(userCredential);
+            navigate("/home");
         }).catch((error)=>{
             console.log(error)
         })
     }
+
+    //Esto es lo que va a manejar el cambio de rutas al dar clic
+    const navigate = useNavigate();
 
     return(
         <div className="sign-in-container">
@@ -39,4 +44,4 @@ const SignUp = ()=>{
     )
 } 
 
-export default SignUp;
+export default SignIn;

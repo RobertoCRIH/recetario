@@ -1,6 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import {auth} from '../../firebase'
 import { onAuthStateChanged , signOut } from 'firebase/auth';
+import Home from '../../routes/home'
 
 const AuthDetails =()=>{
 
@@ -28,7 +29,7 @@ const AuthDetails =()=>{
 
     return(
         <div>
-            {authUser ? <><p>Signed In As {authUser.email}</p> <button onClick={userSignOut}>Sign Out</button></> : <>Signed Out</>}
+            {authUser ? <> <Home userEmail={authUser.email}></Home> <button onClick={userSignOut}>Sign Out</button></> : <>Signed Out</>}
         </div>
     )
 }
