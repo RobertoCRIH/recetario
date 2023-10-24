@@ -16,4 +16,86 @@
     "Metelas al horno"
   ],
   "likes": 12
+},
+{
+  "_id": {
+    "$oid": "65375db71aeeffe9e7a78638"
+  },
+  "nombre": "Espaguetti",
+  "autor": "Luigi Marquesso",
+  "tiempo": 30,
+  "ingredientes": [
+    "pasta",
+    "tomate"
+  ],
+  "pasos": [
+    "Cocina la pasta.",
+    "Ponle tomate",
+    "Echale Sal",
+    "Ponle jugo de naranja"
+  ],
+  "likes": 5
+},
+{
+  "_id": {
+    "$oid": "65375e041aeeffe9e7a7863a"
+  },
+  "nombre": "Lasagna",
+  "autor": "Gina Rossi",
+  "tiempo": 60,
+  "ingredientes": [
+    "pasta",
+    "carne molida",
+    "salsa de tomate",
+    "queso"
+  ],
+  "pasos": [
+    "Cocina la pasta.",
+    "Prepara la carne molida con salsa de tomate.",
+    "Arma las capas de lasagna alternando pasta, carne y queso.",
+    "Hornea hasta que el queso se derrita y se dore."
+  ],
+  "likes": 8
+},
+{
+  "_id": {
+    "$oid": "65375e131aeeffe9e7a7863c"
+  },
+  "nombre": "Ensalada César",
+  "autor": "Julia García",
+  "tiempo": 15,
+  "ingredientes": [
+    "lechuga romana",
+    "pan tostado",
+    "pollo a la parrilla",
+    "aderezo César"
+  ],
+  "pasos": [
+    "Lava y corta la lechuga en trozos.",
+    "Tuesta el pan y córtalo en crutones.",
+    "Cocina el pollo a la parrilla y córtalo en tiras.",
+    "Mezcla la lechuga, crutones y pollo, y adereza con la salsa César."
+  ],
+  "likes": 10
+},
+{
+  "_id": {
+    "$oid": "65375e231aeeffe9e7a7863e"
+  },
+  "nombre": "Pizza Margarita",
+  "autor": "Antonio Russo",
+  "tiempo": 20,
+  "ingredientes": [
+    "masa de pizza",
+    "salsa de tomate",
+    "mozzarella",
+    "albahaca"
+  ],
+  "pasos": [
+    "Estira la masa de pizza en una bandeja.",
+    "Extiende la salsa de tomate sobre la masa.",
+    "Cubre con mozzarella y hojas de albahaca.",
+    "Hornea hasta que la pizza esté dorada y burbujeante."
+  ],
+  "likes": 12
 }]

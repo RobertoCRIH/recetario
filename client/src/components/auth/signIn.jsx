@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {auth} from '../../firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-
+import '../../styles/signin.css'
 const SignIn = ()=>{
 
     const [email,setEmail] = useState('');
@@ -31,14 +31,15 @@ const SignIn = ()=>{
                     placeholder="Enter Your Email" 
                     value={email} 
                     onChange={(e)=>{setEmail(e.target.value)}}>
-                </input>
+                </input> <br />
                 {/* Password Input */}
                 <input type="password" 
                     placeholder="Enter Your Password" 
                     value={password} 
                     onChange={(e)=>{setPassword(e.target.value)}}>
-                </input>
+                </input><br />
                 <button type="submit">Log In</button>
+                
             </form>
         </div>
     )

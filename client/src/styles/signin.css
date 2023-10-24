@@ -1,0 +1,32 @@
+.sign-in-container{
+    background-image: url('../images/bglogin.jpg');
+    background-size: cover;
+    display: flex;
+    
+    align-items: center;
+    
+}
+
+.sign-in-container form{
+    background-color: aliceblue;
+    padding: 30px;
+    height: 50vh;
+    width: 500px;
+}
+
+.sign-in-container form button{
+    margin-top: 40px;
+    background-color: green;
+    font-weight: bold;
+    color:white;
+    border: 0px;
+    padding:5px 10px;
+    border-radius: 5px;
+}
+
+.sign-in-container form input{
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 10px;
+}
+
