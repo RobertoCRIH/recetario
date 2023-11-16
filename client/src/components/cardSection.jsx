@@ -9,7 +9,7 @@ const CardSection = ({recetas})=>{
             <div className="cardSection">
                 {recetas.map((val)=>{
                     return(
-                        <MyCard title={val.nombre} autor={val.autor} likes={val.likes}/>
+                        <MyCard title={val.nombre} autor={val.autor} likes={val.likes} id={val._id}/>
                         
                     )
                 })}

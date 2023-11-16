@@ -58,3 +58,16 @@ app.get('/getone/:id',(req,res)=>{
         })
 })
 
+app.delete('/delete/:id', async (req,res)=>{
+
+    const id = req.params.id;
+
+    db.collection('recetas')
+    .deleteOne({_id : new ObjectId(id)})
+    .then((r)=>{
+        res.status(200).json(r)
+    })
+    .catch(()=>{
+        res.status(500).json({error:"We could not fetch the data from the database"})
+    })
+})

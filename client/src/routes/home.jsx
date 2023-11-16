@@ -7,7 +7,7 @@ import Axios from 'axios';
 
 const Home = ({userEmail})=>{
 
-    const [recetas,setRecetas] = useState(null);
+    const [recetas,setRecetas] = useState([]);
 
     // This is to get data from the table
   useEffect(()=>{
