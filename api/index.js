@@ -134,11 +134,17 @@ app.patch('/patch',(req,res)=>{
     })
 })
 
-// Ruta con el método HEAD
-app.head('/ruta', (req, res) => {
-    // Puedes configurar los encabezados que deseas enviar en la respuesta
-    res.status(200).set({
-      'Custom-Header': 'Valor-Custom-Header',
-      'Otro-Header': 'Otro-Valor'
-    }).end(); // Terminar la respuesta sin enviar un cuerpo
-  });
+
+//Header y options
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // Permite solicitudes desde cualquier origen
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS'); // Métodos permitidos
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization'); // Encabezados permitidos
+    next();
+});
+  
+// Ruta con el método OPTIONS
+app.options('/ruta', (req, res) => {
+// Puedes configurar los encabezados que deseas enviar en la respuesta OPTIONS
+res.status(200).end(); // Terminar la respuesta sin enviar un cuerpo
+});
