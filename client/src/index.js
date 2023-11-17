@@ -6,6 +6,7 @@ import LoginAndSignup from './routes/loginSignup';
 import AuthDetails from './components/auth/authDetails';
 import Recipe from './routes/recipe';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Post from './routes/post';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/recipe',
     element: <Recipe/>
+  },
+  {
+    path: '/post',
+    element: <Post></Post>
   }
 ])
 

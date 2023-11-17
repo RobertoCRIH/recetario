@@ -71,3 +71,23 @@ app.delete('/delete/:id', async (req,res)=>{
         res.status(500).json({error:"We could not fetch the data from the database"})
     })
 })
+
+app.post('/post', async (req,res)=>{
+
+    const nombre = req.body.nombre;
+    const autor = req.body.autor;
+    const tiempo = req.body.tiempo;
+
+    db.collection('recetas')
+    .insertOne({
+        nombre: nombre,
+        autor:  autor,
+        tiempo : tiempo
+    })
+    .then((r)=>{
+        res.status(200).json(r)
+    })
+    .catch(()=>{
+        res.status(500).json({error:"We could not fetch the data from the database"})
+    })
+})
