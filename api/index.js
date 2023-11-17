@@ -82,7 +82,8 @@ app.post('/post', async (req,res)=>{
     .insertOne({
         nombre: nombre,
         autor:  autor,
-        tiempo : tiempo
+        tiempo : tiempo,
+        likes: 0
     })
     .then((r)=>{
         res.status(200).json(r)
@@ -91,3 +92,53 @@ app.post('/post', async (req,res)=>{
         res.status(500).json({error:"We could not fetch the data from the database"})
     })
 })
+
+app.put('/put', async (req,res)=>{
+
+    const id = req.body.id;
+    const nombre = req.body.nombre;
+    const autor = req.body.autor;
+    const tiempo = req.body.tiempo;
+    const likes = req.body.likes;
+
+    db.collection('recetas')
+    .updateOne({_id : new ObjectId(id)},{$set:{
+        nombre: nombre,
+        autor: autor,
+        tiempo: tiempo,
+        likes: likes
+    }})
+    .then((r)=>{
+        res.status(200).json(r)
+    })
+    .catch(()=>{
+        res.status(500).json({error:"We could not fetch the data from the database"})
+    })
+
+
+})
+
+app.patch('/patch',(req,res)=>{
+    const id = req.body.id;
+    const nombre = req.body.nombre;
+
+    db.collection('recetas')
+    .updateOne({_id : new ObjectId(id)},{$set:{
+        nombre: nombre,
+    }})
+    .then((r)=>{
+        res.status(200).json(r)
+    })
+    .catch(()=>{
+        res.status(500).json({error:"We could not fetch the data from the database"})
+    })
+})
+
+// Ruta con el método HEAD
+app.head('/ruta', (req, res) => {
+    // Puedes configurar los encabezados que deseas enviar en la respuesta
+    res.status(200).set({
+      'Custom-Header': 'Valor-Custom-Header',
+      'Otro-Header': 'Otro-Valor'
+    }).end(); // Terminar la respuesta sin enviar un cuerpo
+  });
