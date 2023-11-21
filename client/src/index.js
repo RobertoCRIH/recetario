@@ -7,7 +7,7 @@ import AuthDetails from './components/auth/authDetails';
 import Recipe from './routes/recipe';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Post from './routes/post';
-
+import Put from './routes/put';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: '/post',
     element: <Post></Post>
+  },
+  {
+    path: '/put',
+    element: <Put/>
   }
 ])
 
